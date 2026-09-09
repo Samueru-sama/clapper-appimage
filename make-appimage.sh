@@ -16,7 +16,7 @@ export STRACE_BINARY=clapper
 export STRACE_FLAGS=https://test-videos.co.uk/vids/bigbuckbunny/mp4/h265/1080/Big_Buck_Bunny_1080_10s_1MB.mp4
 
 # Trace and deploy all files and directories needed for the application (including binaries, libraries and others)
-quick-sharun /usr/bin/clapper
+quick-sharun /usr/bin/clapper /usr/lib/clapper*
 
 # Make Clapper load its importer modules from inside the AppImage
 echo 'CLAPPER_SINK_IMPORTER_PATH=${SHARUN_DIR}/lib/clapper-0.0/gst/plugin/importers' >> ./AppDir/.env
